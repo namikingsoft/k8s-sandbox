@@ -1,7 +1,7 @@
 apiVersion: extensions/v1beta1
 kind: Deployment
 metadata:
-  name: my-nginx
+  name: nginx-deployment
 spec:
   replicas: 3
   selector:
@@ -21,7 +21,7 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: my-nginx
+  name: nginx-service
 spec:
   selector:
     run: my-nginx
